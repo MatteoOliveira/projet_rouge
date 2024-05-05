@@ -6,6 +6,9 @@ const userSchema = new Schema({
   pseudo: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   motDePasse: { type: String, required: true },
+  likes: { type: Array, required: true },
+  watchlist: { type: Array, required: true },
+  seen: { type: Array, required: true }
 });
 
 const User = mongoose.model('User', userSchema);

@@ -57,7 +57,7 @@ watcher
   })
   .on('error', error => console.error(`Watcher error: ${error}`));
 
-  app.use('/films', filmRoutes);
+app.use('/films', filmRoutes);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
