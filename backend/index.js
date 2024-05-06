@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const readXlsxFile = require('read-excel-file/node');
 const chokidar = require('chokidar');
 const Film = require('./model/film'); // Assurez-vous que le chemin vers le modèle est correct
-const User = require('./model/user'); // Assurez-vous que le chemin vers le modèle est correct
 const app = express();
 const port = 3000;
 const cors = require('cors');
@@ -58,11 +57,7 @@ watcher
   })
   .on('error', error => console.error(`Watcher error: ${error}`));
 
-app.use('/api/films', filmRoutes);
-
-const userRoutes = require('./routes/routeUser');
-app.use('/api/users', userRoutes);
-
+  pp.use('/api/films', filmRoutes);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
